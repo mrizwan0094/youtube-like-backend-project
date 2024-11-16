@@ -19,7 +19,8 @@ import fs from "fs";
                 resource_type: "auto",
             })
             // file has been uploaded successfully
-            console.log("file is uploaded on cloudinary ", respnse.url);
+            // console.log("file is uploaded on cloudinary ", respnse.url);
+            fs.unlinkSync(localFilePath)
             return respnse;
 
         } catch (error) {
